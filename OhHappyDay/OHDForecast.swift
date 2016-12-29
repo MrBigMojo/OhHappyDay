@@ -1,5 +1,5 @@
 //
-//  OHDParser.swift
+//  OHDForecast.swift
 //  OhHappyDay
 //
 //  Created by Armin Mehinovic on 12/28/16.
@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class OHDParser {
+class OHDForecast {
     
     var _date: String!
     var _weatherType: String!

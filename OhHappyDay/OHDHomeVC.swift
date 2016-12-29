@@ -26,8 +26,8 @@ class OHDHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     var currentWeather: OHDCurrentWeather!
-    var forecast: OHDParser!
-    var forecasts = [OHDParser]()
+    var forecast: OHDForecast!
+    var forecasts = [OHDForecast]()
     
     //MARK: viewLoader methods
     override func viewDidLoad() {
@@ -78,7 +78,7 @@ class OHDHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 if let list = dict["list"] as? [Dictionary<String, AnyObject>] {
                     for obj in list {
-                        let forecast = OHDParser(weatherDict: obj)
+                        let forecast = OHDForecast(weatherDict: obj)
                         self.forecasts.append(forecast)
                         print(obj)
                     }
@@ -98,7 +98,7 @@ class OHDHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 if let list = dict["list"] as? [Dictionary<String, AnyObject>] {
                     for obj in list {
-                        let forecast = OHDParser(weatherDict: obj)
+                        let forecast = OHDForecast(weatherDict: obj)
                         self.forecasts.append(forecast)
                         print(obj)
                     }

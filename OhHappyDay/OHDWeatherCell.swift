@@ -16,7 +16,7 @@ class OHDWeatherCell: UITableViewCell {
     @IBOutlet weak var highTemp: UILabel!
     @IBOutlet weak var lowTemp: UILabel!
     
-    func configureCell(forecast: OHDParser) {
+    func configureCell(forecast: OHDForecast) {
         lowTemp.text = "\(forecast.lowTemp)"
         highTemp.text = "\(forecast.highTemp)"
         weatherType.text = forecast.weatherType

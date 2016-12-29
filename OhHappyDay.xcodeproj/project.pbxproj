@@ -16,7 +16,7 @@
 		C6E532801E14214200DCC01E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E5327E1E14214200DCC01E /* LaunchScreen.storyboard */; };
 		C6E532881E14224800DCC01E /* OHDCurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E532871E14224800DCC01E /* OHDCurrentWeather.swift */; };
 		C6E5328A1E14231800DCC01E /* OHDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E532891E14231800DCC01E /* OHDConstants.swift */; };
-		C6E5328C1E14235600DCC01E /* OHDParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E5328B1E14235600DCC01E /* OHDParser.swift */; };
+		C6E5328C1E14235600DCC01E /* OHDForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E5328B1E14235600DCC01E /* OHDForecast.swift */; };
 		C6E5328E1E14238800DCC01E /* OHDWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E5328D1E14238800DCC01E /* OHDWeatherCell.swift */; };
 		C6E532901E1423AD00DCC01E /* OHDLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E5328F1E1423AD00DCC01E /* OHDLocationManager.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +35,7 @@
 		C6E532811E14214200DCC01E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6E532871E14224800DCC01E /* OHDCurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHDCurrentWeather.swift; sourceTree = "<group>"; };
 		C6E532891E14231800DCC01E /* OHDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHDConstants.swift; sourceTree = "<group>"; };
-		C6E5328B1E14235600DCC01E /* OHDParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHDParser.swift; sourceTree = "<group>"; };
+		C6E5328B1E14235600DCC01E /* OHDForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHDForecast.swift; sourceTree = "<group>"; };
 		C6E5328D1E14238800DCC01E /* OHDWeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHDWeatherCell.swift; sourceTree = "<group>"; };
 		C6E5328F1E1423AD00DCC01E /* OHDLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHDLocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +69,46 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C6832B0B1E15816900B05588 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6E532721E14214200DCC01E /* AppDelegate.swift */,
+				C6E532871E14224800DCC01E /* OHDCurrentWeather.swift */,
+				C6E5328B1E14235600DCC01E /* OHDForecast.swift */,
+				C6E5328F1E1423AD00DCC01E /* OHDLocationManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6832B0C1E15817000B05588 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6E532761E14214200DCC01E /* Main.storyboard */,
+				C6E5327E1E14214200DCC01E /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6832B0D1E15817E00B05588 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6E532741E14214200DCC01E /* OHDHomeVC.swift */,
+				C6E5328D1E14238800DCC01E /* OHDWeatherCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C6832B0E1E1582DB00B05588 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6E532891E14231800DCC01E /* OHDConstants.swift */,
+				C6E532791E14214200DCC01E /* OhHappyDay.xcdatamodeld */,
+				C6E5327C1E14214200DCC01E /* Assets.xcassets */,
+				C6E532811E14214200DCC01E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C6E532661E14214200DCC01E = {
 			isa = PBXGroup;
 			children = (
@@ -90,18 +130,10 @@
 		C6E532711E14214200DCC01E /* OhHappyDay */ = {
 			isa = PBXGroup;
 			children = (
-				C6E532721E14214200DCC01E /* AppDelegate.swift */,
-				C6E532741E14214200DCC01E /* OHDHomeVC.swift */,
-				C6E532871E14224800DCC01E /* OHDCurrentWeather.swift */,
-				C6E532891E14231800DCC01E /* OHDConstants.swift */,
-				C6E5328B1E14235600DCC01E /* OHDParser.swift */,
-				C6E5328D1E14238800DCC01E /* OHDWeatherCell.swift */,
-				C6E5328F1E1423AD00DCC01E /* OHDLocationManager.swift */,
-				C6E532761E14214200DCC01E /* Main.storyboard */,
-				C6E5327C1E14214200DCC01E /* Assets.xcassets */,
-				C6E5327E1E14214200DCC01E /* LaunchScreen.storyboard */,
-				C6E532811E14214200DCC01E /* Info.plist */,
-				C6E532791E14214200DCC01E /* OhHappyDay.xcdatamodeld */,
+				C6832B0B1E15816900B05588 /* Model */,
+				C6832B0C1E15817000B05588 /* View */,
+				C6832B0D1E15817E00B05588 /* Controller */,
+				C6832B0E1E1582DB00B05588 /* Supporting Files */,
 			);
 			path = OhHappyDay;
 			sourceTree = "<group>";
@@ -233,7 +265,7 @@
 				C6E5328A1E14231800DCC01E /* OHDConstants.swift in Sources */,
 				C6E532751E14214200DCC01E /* OHDHomeVC.swift in Sources */,
 				C6E532901E1423AD00DCC01E /* OHDLocationManager.swift in Sources */,
-				C6E5328C1E14235600DCC01E /* OHDParser.swift in Sources */,
+				C6E5328C1E14235600DCC01E /* OHDForecast.swift in Sources */,
 				C6E532881E14224800DCC01E /* OHDCurrentWeather.swift in Sources */,
 				C6E5327B1E14214200DCC01E /* OhHappyDay.xcdatamodeld in Sources */,
 				C6E5328E1E14238800DCC01E /* OHDWeatherCell.swift in Sources */,
